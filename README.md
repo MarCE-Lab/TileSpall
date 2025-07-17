@@ -20,10 +20,6 @@ To ensure diversity in spalling appearance and environmental conditions:
 
 <table>
   <tr>
-    <td align="center"><b>Original</b></td>
-    <td align="center"><b>Mask</b></td>
-  </tr>
-  <tr>
     <td><img src="figures/image1.png" width="200"/></td>
     <td><img src="figures/mask1.png" width="200"/></td>
   </tr>
