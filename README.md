@@ -3,18 +3,7 @@ This dataset comprises **364 images of tile spalling on building façades**, col
 
 ## Overview
 
-- **Images:** 364 real-world RGB images  
-- **Annotations:** Pixel-wise binary masks (in PNG format)  
-- **Domain:** Urban buildings with tile detachment (spalling)  
-- **Geographic scope:** Multiple cities in Taiwan  
-
-## Data Collection
-
-To ensure diversity in spalling appearance and environmental conditions:
-
-- **90%** of images were sourced from **Google Street View**
-- **6.5%** from smartphone photography
-- **3.5%** from **social media platforms**
+The whole data collection process aims to capture the high variability of tile spalling, involving the search for spalling images and manual annotation of spalling areas. To maintain the high variability of building and tile spalling, 90\% of the images were obtained from Google Street View, 6.5\% were captured using smartphones, and the remaining 3.5\% were sourced from various social media platforms. This collection includes all seasons in 10 cities located in Taiwan, resulting in a dataset of 364 damaged images. To facilitate clear observation of spalling representation, all images were captured from the front of buildings.
 
 ## Example Images
 
