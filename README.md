@@ -32,8 +32,12 @@ You can download the dataset from the following link:
 
 🔗 **[https://ce13078.ce.ntu.edu.tw/open_datasets/spalling_data.zip](https://ce13078.ce.ntu.edu.tw/open_datasets/spalling_data.zip)**
 
-Unzip the file to access the images, labels, and optional splits.
+Or use the command-line to download and unzip:
+
+```bash
+wget https://ce13078.ce.ntu.edu.tw/open_datasets/spalling_data.zip
+unzip spalling_data.zip
 
 ## License
 
-Details included in the LICENCE file.
+Details included in the LICENSE file.
