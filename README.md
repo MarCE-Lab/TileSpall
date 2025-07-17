@@ -16,13 +16,26 @@ To ensure diversity in spalling appearance and environmental conditions:
 - **6.5%** from smartphone photography
 - **3.5%** from **social media platforms**
 
-## Examples
+## Example Images
 
-Below are some sample pairs of images and their corresponding binary masks:
-
-<p align="center">
-  <img src="examples/example_grid.png" alt="example image and mask grid" width="600"/>
-</p>
+<table>
+  <tr>
+    <td align="center"><b>Original</b></td>
+    <td align="center"><b>Mask</b></td>
+  </tr>
+  <tr>
+    <td><img src="figures/image1.png" width="200"/></td>
+    <td><img src="figures/mask1.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="figures/image2.png" width="200"/></td>
+    <td><img src="figures/mask2.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="figures/image3.png" width="200"/></td>
+    <td><img src="figures/mask3.png" width="200"/></td>
+  </tr>
+</table>
 
 > *Each column shows an original image (left) and its manually annotated mask (right). Spalling areas are marked in white.*
 
@@ -37,7 +50,7 @@ Or use the command-line to download and unzip:
 ```bash
 wget https://ce13078.ce.ntu.edu.tw/open_datasets/spalling_data.zip
 unzip spalling_data.zip
-
+```
 ## License
 
 Details included in the LICENSE file.
