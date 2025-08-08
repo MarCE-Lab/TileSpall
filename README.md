@@ -39,3 +39,22 @@ unzip spalling_data.zip
 ## License
 
 Details included in the LICENSE file.
+
+## Citation
+
+If you use the TileSpall dataset in your research or publication, please cite the following paper:
+
+```bibtex
+@article{WANG2025113589,
+  title = {A novel multi-scale feature fusion network for tile spalling segmentation in building exterior},
+  journal = {Journal of Building Engineering},
+  volume = {112},
+  pages = {113589},
+  year = {2025},
+  issn = {2352-7102},
+  doi = {https://doi.org/10.1016/j.jobe.2025.113589},
+  url = {https://www.sciencedirect.com/science/article/pii/S2352710225018261},
+  author = {Hai-Wei Wang and Rih-Teng Wu},
+  keywords = {Structural health monitoring, Tile spalling segmentation, Deep learning, Network architectures},
+}
+```
