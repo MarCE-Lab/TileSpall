@@ -36,6 +36,26 @@ Or use the command-line to download and unzip:
 wget https://ce13078.ce.ntu.edu.tw/open_datasets/spalling_data.zip
 unzip spalling_data.zip
 ```
+
+## Train and Inference
+
+### Install Dependencies
+Once the python = 3.9.18 environment is activated, install all required Python packages using the `requirements.txt` file.
+
+```bash
+pip install -r requirements.txt
+```
+### Download Pre-trained Checkpoint
+You can use the command-line to download checkpoint and unzip:
+
+```bash
+gdown --fuzzy 'https://drive.google.com/uc?id=1ZKXXMWIYa_TNui300c1X90xip6I0a0Od'
+unzip ckpt.zip
+```
+
+### Training and Inference and Evaluation
+Run `trainer.py`, `inference.py` and `evaluation.py` to train and test your own model. You can modify some hyperparameters in the files.
+
 ## License
 
 Details included in the LICENSE file.

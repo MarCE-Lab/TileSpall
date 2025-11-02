@@ -2,7 +2,7 @@ import numpy as np
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from PIL import Image
-import os, wandb, glob, torch
+import os, glob, torch
 import segmentation_models_pytorch_3branch as smp
 from tqdm.auto import tqdm
 import albumentations as A
@@ -103,13 +103,7 @@ class Trainer:
         for e in range(self.epochs):
             train_loss, _iou0, train_iou1 = self.train_one_epoch()
             val_loss, _iou0, val_iou1 = self.val_one_epoch()
-            wandb.log({"train_loss": train_loss,
-                    "train_IoU": train_iou1,
-                    
-                    "val_loss": val_loss,
-                    "val_IoU": val_iou1,
-                    
-                    })
+            print(f"Epoch {e+1}/{self.epochs}, Train Loss: {train_loss:.4f}, Train mIoU: {train_iou1:.4f}, Val Loss: {val_loss:.4f}, Val mIoU: {val_iou1:.4f}")
             if val_iou1>best:
                 self.save_model()
                 best = val_iou1
@@ -124,8 +118,10 @@ class Trainer:
         t_val = A.Compose([A.Resize(height, width), A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
                 ToTensorV2()])
         X = os.listdir(self.img_path)
-        X_train, X_temp = train_test_split(X, test_size=0.2, random_state=0)
-        X_val, _X_test = train_test_split(X_temp, test_size=0.5, random_state=0)
+        _X_train, X_temp = train_test_split(X, test_size=0.2, random_state=0)
+        _X_val, _X_test = train_test_split(X_temp, test_size=0.5, random_state=0)
+        X_train = [os.path.join(self.img_path, i) for i in _X_train]
+        X_val = [os.path.join(self.img_path, i) for i in _X_val]
         #datasets
         train_set = SpallingDataset(X_train, t_train)
         val_set = SpallingDataset(X_val, t_val)
@@ -149,8 +145,7 @@ def main():
         batch = 3,
         device = 'cuda'
     )
-    with wandb.init(project="RPL"):
-        model.fit()
+    model.fit()
 
     
 if __name__ == '__main__':

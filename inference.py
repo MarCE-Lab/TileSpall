@@ -43,7 +43,8 @@ class Infer:
                 ToTensorV2()])
         X = os.listdir(self.img_path)
         _X_train, X_temp = train_test_split(X, test_size=0.2, random_state=0)
-        _X_val, X_test = train_test_split(X_temp, test_size=0.5, random_state=0)
+        _X_val, _X_test = train_test_split(X_temp, test_size=0.5, random_state=0)
+        X_test = [os.path.join(self.img_path, i) for i in _X_test]
         test_set = SpallingDataset(X_test, t_test)
         
         return X_test, test_set
