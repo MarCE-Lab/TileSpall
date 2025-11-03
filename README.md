@@ -62,7 +62,7 @@ Details included in the LICENSE file.
 
 ## Citation
 
-If you use the TileSpall dataset in your research or publication, please cite the following paper:
+If you use the TileSpall dataset/implementation in your research or publication, please cite the following paper:
 
 ```bibtex
 @article{WANG2025113589,
